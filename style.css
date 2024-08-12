@@ -1,0 +1,181 @@
+/* General Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:sans-serif ;
+}
+.hero{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: #efefef;
+}
+nav{
+    display: flex;
+    width: 84%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    
+}
+
+nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: orange;
+}
+
+/* Hero Section Details */
+.detel {
+    margin-left: 8%;
+    margin-top: 15%;
+}
+
+.detel h1 {
+    font-size: 50px;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.detel h1 span {
+    color: orange;
+}
+.detel h1 span{
+    animation-name: colorChange;
+    animation-duration:4s;
+    animation-iteration-count:infinite;
+}
+@keyframes colorChange{
+
+    0%{
+        color: red;
+    }
+    25%{
+        color: lime;
+    }
+    50%{
+        color: blueviolet;
+    }
+    100%{
+        color: aquamarine;
+    }
+}
+
+.detel p {
+    color: gray;
+    line-height: 1.6;
+}
+
+.detel a {
+    background: #212121;
+    padding: 10px 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    margin: 30px 0;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.detel a:hover {
+    background: orange;
+}
+
+/* About Section */
+#about {
+    width: 100%;
+    padding: 50px 8%;
+    background: #efefef;
+}
+
+#about h2 {
+    font-size: 36px;
+    color: orangered;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#about p {
+    margin: 0 auto;
+    padding-top: 20px;
+    max-width: 800px;
+    text-align: center;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        gap: 20px;
+    }
+
+    .detel h1 {
+        font-size: 40px;
+    }
+
+    .detel p {
+        font-size: 16px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .about p {
+        padding-top: 15px;
+        margin: 0 20px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+    }
+
+    .detel {
+        margin-left: 5%;
+        margin-top: 20%;
+    }
+
+    .detel h1 {
+        font-size: 32px;
+    }
+
+    .detel p {
+        font-size: 14px;
+    }
+
+    .detel a {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .about h2 {
+        font-size: 24px;
+    }
+
+    .about p {
+        padding-top: 10px;
+        margin: 0 10px;
+        font-size: 14px;
+    }
+}
